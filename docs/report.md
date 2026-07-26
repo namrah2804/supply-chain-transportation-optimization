@@ -24,8 +24,8 @@ factory → warehouse, factory → retailer, and warehouse → retailer.
 
 $$
 \text{Total Cost} = \sum_{f=1}^{4}\sum_{w=1}^{4}\sum_{p=1}^{3} \text{Cost}_{fwp} \cdot b_{fwp}
-\;+\; \sum_{f=1}^{4}\sum_{r=1}^{6}\sum_{p=1}^{3} \text{Cost}_{frp} \cdot a_{frp}
-\;+\; \sum_{w=1}^{4}\sum_{r=1}^{6}\sum_{p=1}^{3} \text{Cost}_{wrp} \cdot c_{wrp}
+\+\ \sum_{f=1}^{4}\sum_{r=1}^{6}\sum_{p=1}^{3} \text{Cost}_{frp} \cdot a_{frp}
+\+\ \sum_{w=1}^{4}\sum_{r=1}^{6}\sum_{p=1}^{3} \text{Cost}_{wrp} \cdot c_{wrp}
 $$
 
 Where:
@@ -39,7 +39,7 @@ Where:
 (direct + via warehouses) cannot exceed that factory's capacity:
 
 $$
-\sum_{w=1}^{4} b_{fwp} + \sum_{r=1}^{6} a_{frp} \;\le\; C_f \qquad \forall f \in \{1,2,3,4\},\; \forall p \in \{1,2,3\}
+\sum_{w=1}^{4} b_{fwp} + \sum_{r=1}^{6} a_{frp} \\le\ C_f \qquad \forall f \in \{1,2,3,4\},\ \forall p \in \{1,2,3\}
 $$
 
 **Retailer demand constraint** — total product received by each retailer
