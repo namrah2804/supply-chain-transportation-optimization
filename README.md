@@ -8,7 +8,6 @@ The analysis is conducted in two stages:
 - Carbon Policy Extension — incorporating carbon costs into the optimisation model to compare a traditional cost-minimising distribution plan with a cost-and-emissions-aware alternative.
 
 The project demonstrates how optimisation modelling can support supply chain decisions by evaluating the trade-off between operational cost efficiency and environmental sustainability.
-![Total cost base model](assets/cost_breakdown.svg)
 
 ## The problem
 
@@ -48,14 +47,12 @@ The model allows both:
 
 ## Results
 
-| Model | Total cost |
-|---|---|
-| Base LP model | **£1,640,500** |
-| + Carbon cost policy | **£5,540,000** |
+The base model landed on a total distribution cost of **£1,640,500**, split
+across the three route types:
 
-![Base vs carbon policy total cost](assets/carbon_policy_comparison.svg)
+![Cost breakdown by route type](cost_breakdown.svg)
 
-**Base model highlights**
+**Key takeaways from the base model**
 - Direct factory → retailer shipments (£610,750) beat routing through
   warehouses (£1,029,750 combined) on cost, even though the warehouse route
   carried more total volume.
@@ -67,12 +64,24 @@ The model allows both:
   solution), while others (Factory 3's Product 3 capacity) had zero shadow
   price, meaning extra capacity there wouldn't reduce cost at all.
 
-**With carbon cost added**
+### Adding a carbon cost policy
+
+Re-running the model with a carbon cost added to every route's price pushed
+total cost up to **£5,540,000**:
+
+![Base vs carbon policy total cost](carbon_policy_comparison.svg)
+
 - The plan leaned even harder into direct factory → retailer shipments and
   almost abandoned factory → warehouse routing.
 - Total cost rose ~3.4x, but the solver still found the cheapest *combined*
   (transport + carbon) plan rather than just the lowest-emission one —
   demonstrating the classic cost/sustainability trade-off in network design.
+
+## 📄 Full report
+
+See **[REPORT.md](REPORT.md)** for the complete write-up: full LP formulation
+with all constraint equations, detailed results, sensitivity analysis, and
+the carbon-policy extension explained in depth.
 
 ## Repo structure
 
@@ -87,10 +96,6 @@ The model allows both:
 │   └── carbon_policy_comparison.svg
 └── distribution_LP_model_solution.xlsx
 ```
-
- **Full report**: [`docs/report.md`](docs/report.md) — the complete write-up with the LP
-formulation, constraint definitions, results discussion, sensitivity
-analysis, and the carbon-policy extension in detail.
 
 ### Inside the workbook
 
