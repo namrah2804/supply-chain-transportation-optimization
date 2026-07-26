@@ -86,12 +86,12 @@ analysis, and the carbon-policy extension in detail.
 
 | Sheet | Contents |
 |---|---|
-| `Question 2` | Base LP model — variables, cost matrix, constraints |
-| `Question 2- Answer Report` | Solver Answer Report (base model) |
-| `Question 2-Sensitivity Report` | Solver Sensitivity Report — shadow prices & reduced costs |
-| `Question 3` | Carbon-policy-adjusted LP model |
-| `Question 3 - Answer Report` | Solver Answer Report (carbon model) |
-| `Question 3 -Sensitivity Report` | Solver Sensitivity Report (carbon model) |
+| `Base Model` | Base LP model — variables, cost matrix, constraints |
+| `Base Model- Answer Report` | Solver Answer Report (base model) |
+| `Base Model-Sensitivity Report` | Solver Sensitivity Report — shadow prices & reduced costs |
+| `Carbon Policy Model` | Carbon-policy-adjusted LP model |
+| `Carbon Policy Model - Answer Report` | Solver Answer Report (carbon model) |
+| `Carbon Policy Model -Sensitivity Report` | Solver Sensitivity Report (carbon model) |
 
 ## Reproducing it
 
