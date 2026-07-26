@@ -69,7 +69,7 @@ across the three route types:
 Re-running the model with a carbon cost added to every route's price pushed
 total cost up to **£5,540,000**:
 
-![Base vs carbon policy total cost](carbon_policy_comparison.svg)
+![Base vs carbon policy total cost](assets/carbon_policy_comparison.svg)
 
 - The plan leaned even harder into direct factory → retailer shipments and
   almost abandoned factory → warehouse routing.
