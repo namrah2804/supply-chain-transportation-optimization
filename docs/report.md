@@ -94,6 +94,17 @@ demand was fully met.
 - Factory 1 → Retailer 4 was the best direct route: 32,500 units of
   Product 1 and 7,500 units of Product 2.
 
+## Key Insights
+
+- Direct factory-to-retailer shipments were more cost-effective overall than
+  routing through warehouses, despite carrying less volume.
+- The optimisation model consistently favoured the most economical routes,
+  which meant some factory-to-retailer combinations were avoided entirely —
+  Factories 2 and 3, for example, made no direct shipments to retailers at
+  all.
+- Warehouse 3 showed clear signs of underutilisation, pointing to spare
+  capacity that could be used in future demand scenarios.
+
 ## Discussion
 
 Direct shipments proved more cost-effective overall than routing through
