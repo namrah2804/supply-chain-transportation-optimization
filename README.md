@@ -150,7 +150,7 @@ the carbon-policy extension explained in depth.
 1. Open `distribution_LP_model_solution.xlsx` in Excel.
 2. Enable the **Solver** add-in (`File → Options → Add-ins → Solver
    Add-in`).
-3. Go to `Data → Solver` on either the `Question 2` or `Question 3` sheet —
+3. Go to `Data → Solver` on either the `Base Model` or `Carbon Policy Model` sheet —
    the objective cell, variable cells, and constraints are already set up.
 4. Click **Solve** to reproduce the optimal plan, then **Solver → Reports**
    to regenerate the Answer/Sensitivity reports.
