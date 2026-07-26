@@ -69,15 +69,52 @@ across the three route types:
 Re-running the model with a carbon cost added to every route's price pushed
 total cost up to **£5,540,000**:
 
-![Base vs carbon policy total cost](assets/carbon_policy_comparison.svg)
+![Base vs carbon policy total cost](carbon_policy_comparison.svg)
 
-- The plan leaned even harder into direct factory → retailer shipments and
-  almost abandoned factory → warehouse routing.
-- Total cost rose ~3.4x, but the solver still found the cheapest *combined*
-  (transport + carbon) plan rather than just the lowest-emission one —
-  demonstrating the classic cost/sustainability trade-off in network design.
+The revised model didn't just cost more — it changed the distribution
+strategy itself, by weighing both financial and environmental cost together
+rather than cost alone.
 
-## 📄 Full report
+**Key findings from the carbon-aware model**
+- Prioritised routes based on *combined* financial and carbon cost, not
+  transport cost alone.
+- Changed which routes were attractive — some previously competitive routes
+  became uneconomical once carbon cost was added.
+- Reduced the use of indirect (warehouse-routed) shipments in favour of
+  direct factory-to-retailer routes.
+- Demonstrated how sustainability considerations can meaningfully alter the
+  optimal supply chain configuration.
+
+**Cost-only vs. carbon-aware optimisation**
+
+The two models answer different business questions:
+
+| Model | Primary objective |
+|---|---|
+| Baseline Model | Minimise transportation cost |
+| Carbon Policy Model | Minimise transportation cost **plus** carbon cost |
+
+The comparison shows that the most cost-efficient distribution plan can
+change once environmental costs enter the optimisation objective — a
+reminder that supply chain decisions often need to weigh more than one
+business objective at once.
+
+## Business insights
+
+- **Direct distribution can reduce cost.** Direct factory-to-retailer
+  transportation is often more economical where route costs are favourable,
+  since it avoids the extra transportation stage warehouses introduce.
+- **Warehouses provide strategic flexibility.** Even where warehouse-based
+  routes cost more, warehouses give the network extra capacity and
+  alternative routing options that a purely direct network wouldn't have.
+- **The optimal solution depends on the objective.** A cost-minimising
+  supply chain can produce a meaningfully different distribution plan from
+  one that also accounts for environmental cost.
+- **Optimisation supports trade-off analysis.** Linear programming lets
+  decision-makers evaluate the trade-off between cost efficiency and
+  environmental sustainability directly, rather than guessing at it.
+
+## Full report
 
 See **[REPORT.md](REPORT.md)** for the complete write-up: full LP formulation
 with all constraint equations, detailed results, sensitivity analysis, and
