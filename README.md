@@ -1,4 +1,4 @@
-# 📦 Supply Chain Distribution Optimisation (Linear Programming)
+# Supply Chain Distribution Optimisation (Linear Programming)
 
 Minimising distribution cost across a multi-product, multi-echelon supply
 network — 4 factories, 4 warehouses, 6 retailers — using linear programming
@@ -7,7 +7,7 @@ compare cost-only vs. cost-and-emissions-aware distribution plans.
 
 ![Total cost base model](assets/cost_breakdown.svg)
 
-## 🧩 The problem
+## The problem
 
 A manufacturer produces 3 products across 4 factories and needs to get them
 to 6 retailers — either shipping **directly**, or **via one of 4
@@ -23,7 +23,7 @@ tiers of nodes and three types of edges.
 
 ![Network structure](assets/network_diagram.svg)
 
-## 🛠️ Approach
+## Approach
 
 - **Formulation**: decision variables for each of the three flow types
   (factory→warehouse, factory→retailer, warehouse→retailer), one objective
@@ -36,7 +36,7 @@ tiers of nodes and three types of edges.
   function, using published emission factors and a per-tonne CO2 price, to
   see how the optimal plan shifts once environmental cost is priced in.
 
-## 📊 Results
+## Results
 
 | Model | Total cost |
 |---|---|
@@ -64,7 +64,7 @@ tiers of nodes and three types of edges.
   (transport + carbon) plan rather than just the lowest-emission one —
   demonstrating the classic cost/sustainability trade-off in network design.
 
-## 📁 Repo structure
+## Repo structure
 
 ```
 .
@@ -78,7 +78,7 @@ tiers of nodes and three types of edges.
 └── distribution_LP_model_solution.xlsx
 ```
 
-📄 **Full report**: [`docs/report.md`](docs/report.md) — the complete write-up with the LP
+ **Full report**: [`docs/report.md`](docs/report.md) — the complete write-up with the LP
 formulation, constraint definitions, results discussion, sensitivity
 analysis, and the carbon-policy extension in detail.
 
@@ -93,7 +93,7 @@ analysis, and the carbon-policy extension in detail.
 | `Question 3 - Answer Report` | Solver Answer Report (carbon model) |
 | `Question 3 -Sensitivity Report` | Solver Sensitivity Report (carbon model) |
 
-## ▶️ Reproducing it
+## Reproducing it
 
 1. Open `distribution_LP_model_solution.xlsx` in Excel.
 2. Enable the **Solver** add-in (`File → Options → Add-ins → Solver
@@ -103,7 +103,7 @@ analysis, and the carbon-policy extension in detail.
 4. Click **Solve** to reproduce the optimal plan, then **Solver → Reports**
    to regenerate the Answer/Sensitivity reports.
 
-## 🧠 Notes / caveats
+## Notes 
 
 - The carbon emission factors and £10/tonne CO2 price are illustrative
   assumptions (based on published DEFRA/BEIS, EPA, IMF and PwC figures), not
@@ -112,7 +112,7 @@ analysis, and the carbon-policy extension in detail.
   research modelling — shared here to show the formulation and Solver
   workflow, not as production supply-chain software.
 
-## 📄 License
+## License
 
-Shared for educational reference. Feel free to learn from the approach —
+Shared for educational reference. Feel free to learn from the approach.
 please don't submit it as your own coursework.
