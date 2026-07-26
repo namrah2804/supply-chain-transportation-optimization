@@ -22,8 +22,8 @@ The optimisation model determines the lowest-cost distribution plan while ensuri
 
 The model allows both:
 
-Factory → Retailer
-Factory → Warehouse → Retailer
+- Factory → Retailer
+- Factory → Warehouse → Retailer
 
 ---
 
