@@ -1,10 +1,13 @@
 # Supply Chain Distribution Optimisation (Linear Programming)
 
-Minimising distribution cost across a multi-product, multi-echelon supply
-network — 4 factories, 4 warehouses, 6 retailers — using linear programming
-in Excel Solver, then extending the model with a **carbon cost policy** to
-compare cost-only vs. cost-and-emissions-aware distribution plans.
+This project addresses a multi-product, multi-echelon supply chain distribution problem involving 4 factories, 4 warehouses, and 6 retailers. A linear programming model was developed in Microsoft Excel Solver to determine the optimal distribution plan across direct and warehouse-based transportation routes.
 
+The analysis is conducted in two stages:
+
+- Supply Chain Optimisation — minimising total transportation costs while satisfying factory capacity, warehouse capacity, retailer demand, and flow-balance constraints.
+- Carbon Policy Extension — incorporating carbon costs into the optimisation model to compare a traditional cost-minimising distribution plan with a cost-and-emissions-aware alternative.
+
+The project demonstrates how optimisation modelling can support supply chain decisions by evaluating the trade-off between operational cost efficiency and environmental sustainability.
 ![Total cost base model](assets/cost_breakdown.svg)
 
 ## The problem
