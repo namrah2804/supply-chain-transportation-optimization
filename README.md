@@ -9,17 +9,19 @@ compare cost-only vs. cost-and-emissions-aware distribution plans.
 
 ## The problem
 
-A manufacturer produces 3 products across 4 factories and needs to get them
-to 6 retailers — either shipping **directly**, or **via one of 4
-warehouses**. Every route has a different unit transport cost. The question:
+A manufacturing company operates four factories, four warehouses and six retailers.
 
-> *What quantity of each product should travel on each possible route, to
-> minimise total transportation cost while meeting every factory's
-> capacity, every warehouse's capacity and flow balance, and every
-> retailer's demand?*
+The company needs to decide:
 
-This is a classic **transhipment problem** — a network-flow LP with three
-tiers of nodes and three types of edges.
+- How much of each product should be shipped?
+- Which factories should supply which retailers?
+- Which warehouses should be used?
+- Whether direct or indirect routes are more cost-effective.
+
+The optimisation model determines the lowest-cost distribution plan while ensuring that all operational constraints are satisfied.
+
+---
+
 
 ![Network structure](assets/network_diagram.svg)
 
