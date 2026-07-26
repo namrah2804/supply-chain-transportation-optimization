@@ -20,6 +20,11 @@ The company needs to decide:
 
 The optimisation model determines the lowest-cost distribution plan while ensuring that all operational constraints are satisfied.
 
+The model allows both:
+
+Factory → Retailer
+Factory → Warehouse → Retailer
+
 ---
 
 
