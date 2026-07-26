@@ -1,0 +1,105 @@
+<svg viewBox="0 0 980 560" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect width="980" height="560" fill="#ffffff"/>
+
+  <!-- Column headers -->
+  <text x="115" y="40" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">FACTORIES</text>
+  <text x="490" y="40" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">WAREHOUSES</text>
+  <text x="865" y="40" font-size="16" font-weight="700" fill="#1f2937" text-anchor="middle">RETAILERS</text>
+
+  <!-- Factory nodes -->
+  <g font-size="14" font-weight="600">
+    <rect x="55" y="70"  width="120" height="42" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="115" y="96" text-anchor="middle" fill="#1e3a8a">Factory 1</text>
+
+    <rect x="55" y="150" width="120" height="42" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="115" y="176" text-anchor="middle" fill="#1e3a8a">Factory 2</text>
+
+    <rect x="55" y="230" width="120" height="42" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="115" y="256" text-anchor="middle" fill="#1e3a8a">Factory 3</text>
+
+    <rect x="55" y="310" width="120" height="42" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="1.5"/>
+    <text x="115" y="336" text-anchor="middle" fill="#1e3a8a">Factory 4</text>
+  </g>
+
+  <!-- Warehouse nodes -->
+  <g font-size="14" font-weight="600">
+    <rect x="430" y="110" width="130" height="42" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="495" y="136" text-anchor="middle" fill="#14532d">Warehouse 1</text>
+
+    <rect x="430" y="185" width="130" height="42" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="495" y="211" text-anchor="middle" fill="#14532d">Warehouse 2</text>
+
+    <rect x="430" y="260" width="130" height="42" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="495" y="286" text-anchor="middle" fill="#14532d">Warehouse 3</text>
+
+    <rect x="430" y="335" width="130" height="42" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+    <text x="495" y="361" text-anchor="middle" fill="#14532d">Warehouse 4</text>
+  </g>
+
+  <!-- Retailer nodes -->
+  <g font-size="13" font-weight="600">
+    <rect x="805" y="55"  width="120" height="38" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+    <text x="865" y="79" text-anchor="middle" fill="#78350f">Retailer 1</text>
+
+    <rect x="805" y="120" width="120" height="38" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+    <text x="865" y="144" text-anchor="middle" fill="#78350f">Retailer 2</text>
+
+    <rect x="805" y="185" width="120" height="38" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+    <text x="865" y="209" text-anchor="middle" fill="#78350f">Retailer 3</text>
+
+    <rect x="805" y="250" width="120" height="38" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+    <text x="865" y="274" text-anchor="middle" fill="#78350f">Retailer 4</text>
+
+    <rect x="805" y="315" width="120" height="38" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+    <text x="865" y="339" text-anchor="middle" fill="#78350f">Retailer 5</text>
+
+    <rect x="805" y="380" width="120" height="38" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+    <text x="865" y="404" text-anchor="middle" fill="#78350f">Retailer 6</text>
+  </g>
+
+  <!-- Factory -> Warehouse lines -->
+  <g stroke="#16a34a" stroke-width="1.2" opacity="0.55">
+    <line x1="175" y1="91"  x2="430" y2="131"/>
+    <line x1="175" y1="171" x2="430" y2="206"/>
+    <line x1="175" y1="251" x2="430" y2="281"/>
+    <line x1="175" y1="331" x2="430" y2="356"/>
+    <line x1="175" y1="91"  x2="430" y2="356"/>
+    <line x1="175" y1="251" x2="430" y2="131"/>
+    <line x1="175" y1="171" x2="430" y2="281"/>
+    <line x1="175" y1="331" x2="430" y2="206"/>
+  </g>
+
+  <!-- Warehouse -> Retailer lines -->
+  <g stroke="#d97706" stroke-width="1.2" opacity="0.55">
+    <line x1="560" y1="131" x2="805" y2="74"/>
+    <line x1="560" y1="206" x2="805" y2="139"/>
+    <line x1="560" y1="281" x2="805" y2="204"/>
+    <line x1="560" y1="356" x2="805" y2="269"/>
+    <line x1="560" y1="131" x2="805" y2="334"/>
+    <line x1="560" y1="356" x2="805" y2="399"/>
+    <line x1="560" y1="206" x2="805" y2="269"/>
+    <line x1="560" y1="281" x2="805" y2="399"/>
+  </g>
+
+  <!-- Direct Factory -> Retailer lines -->
+  <g stroke="#2563eb" stroke-width="1.4" stroke-dasharray="5,4" opacity="0.6">
+    <line x1="175" y1="91"  x2="805" y2="269"/>
+    <line x1="175" y1="171" x2="805" y2="139"/>
+    <line x1="175" y1="331" x2="805" y2="399"/>
+    <line x1="175" y1="251" x2="805" y2="74"/>
+  </g>
+
+  <!-- Legend -->
+  <g font-size="13">
+    <line x1="55" y1="450" x2="90" y2="450" stroke="#16a34a" stroke-width="2"/>
+    <text x="98" y="454" fill="#374151">Factory → Warehouse</text>
+
+    <line x1="55" y1="478" x2="90" y2="478" stroke="#d97706" stroke-width="2"/>
+    <text x="98" y="482" fill="#374151">Warehouse → Retailer</text>
+
+    <line x1="55" y1="506" x2="90" y2="506" stroke="#2563eb" stroke-width="2" stroke-dasharray="5,4"/>
+    <text x="98" y="510" fill="#374151">Direct Factory → Retailer</text>
+  </g>
+
+  <text x="55" y="540" font-size="12" fill="#6b7280">Each edge carries 3 products; the LP model chooses the volume on every edge that minimises total cost.</text>
+</svg>

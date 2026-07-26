@@ -1,0 +1,22 @@
+<svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" font-family="Helvetica, Arial, sans-serif">
+  <rect width="700" height="380" fill="#ffffff"/>
+  <text x="350" y="35" font-size="17" font-weight="700" fill="#1f2937" text-anchor="middle">Total Cost: Base Model vs. Carbon-Policy Model</text>
+
+  <line x1="80" y1="310" x2="620" y2="310" stroke="#9ca3af" stroke-width="1.5"/>
+
+  <!-- base 1,640,500 -> scaled to 75px of 230px max (5,540,000 = 230px) -->
+  <g>
+    <rect x="150" y="235" width="150" height="75" fill="#2563eb" rx="4"/>
+    <text x="225" y="222" font-size="15" font-weight="700" fill="#1e3a8a" text-anchor="middle">£1,640,500</text>
+    <text x="225" y="335" font-size="13" fill="#374151" text-anchor="middle">Base LP Model</text>
+  </g>
+
+  <!-- carbon 5,540,000 -> 230px -->
+  <g>
+    <rect x="400" y="80" width="150" height="230" fill="#dc2626" rx="4"/>
+    <text x="475" y="66" font-size="15" font-weight="700" fill="#7f1d1d" text-anchor="middle">£5,540,000</text>
+    <text x="475" y="335" font-size="13" fill="#374151" text-anchor="middle">+ Carbon Policy</text>
+  </g>
+
+  <text x="350" y="360" font-size="12" fill="#6b7280" text-anchor="middle">Carbon cost priced at £10/tonne CO2 (DEFRA/BEIS &amp; EPA 2024 emission factors)</text>
+</svg>
