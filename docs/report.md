@@ -139,6 +139,14 @@ warehouse routing mainly for smaller, lower-priority demand.
 
 ## Carbon Policy Model — Incorporating a Carbon Policy
 
+To implement a carbon policy, the first step is to determine the CO2 cost of
+moving a product between locations via each possible route. Adding this
+carbon cost as a supplement to the existing transport cost enhances the
+model by bringing environmental impact alongside economic cost — giving a
+basis to weigh up the trade-off between minimising cost and minimising the
+environmental footprint of the supply chain.
+
+
 ### Approach
 
 To model a carbon policy, a carbon cost is added on top of the existing
