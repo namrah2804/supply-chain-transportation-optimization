@@ -46,21 +46,21 @@ $$
 (direct + via warehouses) must meet or exceed demand:
 
 $$
-\sum_{f=1}^{4} a_{frp} + \sum_{w=1}^{4} c_{wrp} \;\ge\; C_r \qquad \forall r \in \{1,2,3,4,5,6\},\; \forall p \in \{1,2,3\}
+\sum_{f=1}^{4} a_{frp} + \sum_{w=1}^{4} c_{wrp} \\ge\ C_r \qquad \forall r \in \{1,2,3,4,5,6\},\ \forall p \in \{1,2,3\}
 $$
 
 **Warehouse balance constraint** — inflow to each warehouse must equal
 outflow:
 
 $$
-\sum_{f=1}^{4} b_{fwp} \;=\; \sum_{r=1}^{6} c_{wrp} \qquad \forall w \in \{1,2,3,4\},\; \forall p \in \{1,2,3\}
+\sum_{f=1}^{4} b_{fwp} \=\ \sum_{r=1}^{6} c_{wrp} \qquad \forall w \in \{1,2,3,4\},\ \forall p \in \{1,2,3\}
 $$
 
 **Warehouse capacity constraint** — inbound shipments to a warehouse cannot
 exceed its capacity:
 
 $$
-\sum_{f=1}^{4} b_{fwp} \;\le\; C_w \qquad \forall w \in \{1,2,3,4\},\; \forall p \in \{1,2,3\}
+\sum_{f=1}^{4} b_{fwp} \\le\ C_w \qquad \forall w \in \{1,2,3,4\},\ \forall p \in \{1,2,3\}
 $$
 
 **Non-negativity constraint** — all decision variables are non-negative:
