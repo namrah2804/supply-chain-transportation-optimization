@@ -50,7 +50,7 @@ The model allows both:
 The base model landed on a total distribution cost of **£1,640,500**, split
 across the three route types:
 
-![Cost breakdown by route type](cost_breakdown.svg)
+![Total cost base model](assets/cost_breakdown.svg)
 
 **Key takeaways from the base model**
 - Direct factory → retailer shipments (£610,750) beat routing through
