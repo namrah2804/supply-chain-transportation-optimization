@@ -22,22 +22,52 @@ for all `f ∈ {1,2,3,4}`, `p ∈ {1,2,3}`, `w ∈ {1,2,3,4}`, `r ∈ {1,2,3,4,5
 Minimise total distribution cost across all three transport legs:
 factory → warehouse, factory → retailer, and warehouse → retailer.
 
-```
-Total Cost = Σ Cost_fwp · b_fwp   (factories → warehouses)
-           + Σ Cost_frp · a_frp   (factories → retailers)
-           + Σ Cost_wrp · c_wrp   (warehouses → retailers)
-```
+$$
+\text{Total Cost} = \sum_{f=1}^{4}\sum_{w=1}^{4}\sum_{p=1}^{3} \text{Cost}_{fwp} \cdot b_{fwp}
+\;+\; \sum_{f=1}^{4}\sum_{r=1}^{6}\sum_{p=1}^{3} \text{Cost}_{frp} \cdot a_{frp}
+\;+\; \sum_{w=1}^{4}\sum_{r=1}^{6}\sum_{p=1}^{3} \text{Cost}_{wrp} \cdot c_{wrp}
+$$
+
+Where:
+- `Cost_fwp` — unit cost of transporting product `p` from factory `f` to warehouse `w`
+- `Cost_frp` — unit cost of transporting product `p` from factory `f` to retailer `r`
+- `Cost_wrp` — unit cost of transporting product `p` from warehouse `w` to retailer `r`
 
 ### Constraints
 
-- **Factory capacity** — total product shipped from each factory (direct +
-  via warehouses) cannot exceed that factory's capacity.
-- **Retailer demand** — total product received by each retailer (direct +
-  via warehouses) must meet or exceed demand.
-- **Warehouse balance** — inflow to each warehouse must equal outflow.
-- **Warehouse capacity** — inbound shipments to a warehouse cannot exceed its
-  capacity.
-- **Non-negativity** — all decision variables ≥ 0.
+**Factory capacity constraint** — total product shipped from each factory
+(direct + via warehouses) cannot exceed that factory's capacity:
+
+$$
+\sum_{w=1}^{4} b_{fwp} + \sum_{r=1}^{6} a_{frp} \;\le\; C_f \qquad \forall f \in \{1,2,3,4\},\; \forall p \in \{1,2,3\}
+$$
+
+**Retailer demand constraint** — total product received by each retailer
+(direct + via warehouses) must meet or exceed demand:
+
+$$
+\sum_{f=1}^{4} a_{frp} + \sum_{w=1}^{4} c_{wrp} \;\ge\; C_r \qquad \forall r \in \{1,2,3,4,5,6\},\; \forall p \in \{1,2,3\}
+$$
+
+**Warehouse balance constraint** — inflow to each warehouse must equal
+outflow:
+
+$$
+\sum_{f=1}^{4} b_{fwp} \;=\; \sum_{r=1}^{6} c_{wrp} \qquad \forall w \in \{1,2,3,4\},\; \forall p \in \{1,2,3\}
+$$
+
+**Warehouse capacity constraint** — inbound shipments to a warehouse cannot
+exceed its capacity:
+
+$$
+\sum_{f=1}^{4} b_{fwp} \;\le\; C_w \qquad \forall w \in \{1,2,3,4\},\; \forall p \in \{1,2,3\}
+$$
+
+**Non-negativity constraint** — all decision variables are non-negative:
+
+$$
+a_{frp} \ge 0, \quad b_{fwp} \ge 0, \quad c_{wrp} \ge 0
+$$
 
 ## Results
 
@@ -96,7 +126,7 @@ warehouse routing mainly for smaller, lower-priority demand.
 
 ---
 
-## Question 3 — Incorporating a Carbon Policy
+## Carbon Policy Model — Incorporating a Carbon Policy
 
 ### Approach
 
@@ -108,16 +138,19 @@ into a single trade-off.
 (2024); a carbon cost factor of £10 per tonne of CO2, based on IMF (2023) and
 PwC (2023) estimates.
 
-```
-Carbon Emissions (kg CO2) = Emission Factor (kg CO2/ton-km) × Weight (tons) × Distance (km)
-Carbon Cost = Carbon Emissions (tons CO2) × £10/ton CO2
-```
+$$
+\text{Carbon Emissions (kg CO}_2\text{)} = \text{Emission Factor (kg CO}_2\text{/ton-km)} \times \text{Weight (tons)} \times \text{Distance (km)}
+$$
+
+$$
+\text{Carbon Cost} = \text{Carbon Emissions (tons CO}_2\text{)} \times \text{Carbon Cost Factor (£/ton CO}_2\text{)}
+$$
 
 ### Updated objective function
 
-```
-Total Cost = (Carbon Emissions (tons CO2) × £10/ton CO2) + Transportation Cost
-```
+$$
+\text{Total Cost} = \big(\text{Carbon Emissions (tons CO}_2\text{)} \times \text{£10/ton CO}_2\big) + \text{Transportation Cost}
+$$
 
 Capacity, demand, and warehouse-balance constraints are unchanged from the
 base model.
